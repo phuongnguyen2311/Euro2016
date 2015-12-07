@@ -1354,6 +1354,11 @@
 		}
 
 		$( "#loginbtn" ).click(function() {
+
+			$('#groups').find('.groupW').each(function( index ) {
+				  var group_name = $(this).find('h3').text();
+				  
+			});
 		   $("#userdraw" ).submit();
 		});
 	</script>
