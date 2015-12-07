@@ -11,6 +11,20 @@
 |
 */
 
+use App\UserDraw;
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return view('index');
+});
+
+
+Route::post('/userdraw', function (Request $request) {
+    $userdraw = new UserDraw();
+    $userdraw->name = $request->name;
+    $userdraw->email = $request->email;
+    $userdraw->group_name = $request->group_name;
+    $userdraw->club	 = $request->club;
+     $userdraw->save();
+    return redirect('/');
 });

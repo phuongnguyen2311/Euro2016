@@ -338,19 +338,23 @@
 			         <span class="nm">Turkey</span>
 			      </li>
 			   </div>
-			   <div style="clear:both;"><a id="drawsave" class="btn btn-lg btn-em" href="javascript:void(0);" onclick="showPopup()" style="visibility: visible;">Save Prediction</a></div>
+			   <div style="clear:both;"><a id="drawsave" class="btn btn-lg btn-em"  onclick="showPopup()">Save Prediction</a></div>
 			</div>
 			<!-- Popup enter name -->
-			<div id="logindiv" style="display: none;">			
-	            <form class="form" action="#" id="login">
+			<div id="logindiv" >	
+			    @include('common.errors')		
+	            <form class="form" action="/userdraw" method="POST"  id="userdraw">
+	              {{ csrf_field() }}
 	                <hr><br>
 	                <label>Name : </label>
 	                <br>
-	                <input type="text" id="username" placeholder="Ex -john123"><br>
+	                <input type="text" id="username" name="name" placeholder="Ex -john123"><br>
 	                <br>
 	                <label>Email : </label>
 	                <br>
-	                <input type="text" id="email" placeholder="exempale@gmail.com"><br>
+	                <input type="text" id="email" name="email" placeholder="exempale@gmail.com"><br>
+	                <input type="hidden" id="group_name" name="group_name" value="Group A">
+	                <input type="hidden" id="club" name="club" value="FRANCE">
 	                <br>
 	                <div class="social">
 	                	@include('partials.share-buttons')
@@ -1203,7 +1207,9 @@
 	</script>
 	<script>
 		function init() {
-			$("#drawsave").css("visibility", "hidden");
+			$("#drawsave").css("display", "none");
+			$("#logindiv").css("visibility", "hidden");
+			
 		    var c = [];
 		    $.each(pot, function(b, d) {
 		        var a = [];
@@ -1241,7 +1247,7 @@
 		    $("#drawexec").css("visibility", "hidden");
 		    setTimeout(function() {
 		        $("#drawexec").css("visibility", "visible").html("Simulate draw again");
-		        $("#drawsave").css("visibility", "visible");
+		        $("#drawsave").css("display", "block");
 		        
 		    }, 1700 * RAWG.length);
 		    $.each(RAWG, function(c, e) {
@@ -1342,8 +1348,13 @@
 
 		 drawAnimation();
 		}
+		
 		function showPopup(){
-			$("#logindiv").css("display", "block");
+			$("#logindiv").css("visibility", "visible");
 		}
+
+		$( "#loginbtn" ).click(function() {
+		   $("#userdraw" ).submit();
+		});
 	</script>
 @stop
