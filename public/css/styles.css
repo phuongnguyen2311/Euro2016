@@ -182,15 +182,6 @@ main:after,
 	clear: both
 }
 
-#header-e1 {
-	float: left;
-}
-#header-e2 {
-	overflow: hidden;
-}
-#header-e3 {
-	float: right;
-}
 
 input[type=button] {
     background-color: #123456;

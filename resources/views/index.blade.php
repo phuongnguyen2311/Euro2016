@@ -357,7 +357,7 @@
 	                <input type="hidden" id="club" name="club" value="FRANCE">
 	                <br>
 	                <div class="social">
-	                	@include('partials.share-buttons')
+	         	        @include('partials.share-buttons') 	
 	                </div>
 	                 
 	                 <br>
