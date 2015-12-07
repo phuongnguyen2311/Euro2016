@@ -1350,15 +1350,20 @@
 		}
 		
 		function showPopup(){
+
+			$('#groups').find('.groupW').each(function( index ) {
+				  var group_name = $(this).find('h3').text();
+				  var str = "[ " + group_name + ":[";
+				  $(this).find('ul').find('li').each(function( index ) {
+				  	str+= $(this).text() + ",";
+				  });
+				  str += "]";
+				  console.log(str);
+			});
 			$("#logindiv").css("visibility", "visible");
 		}
 
 		$( "#loginbtn" ).click(function() {
-
-			$('#groups').find('.groupW').each(function( index ) {
-				  var group_name = $(this).find('h3').text();
-				  
-			});
 		   $("#userdraw" ).submit();
 		});
 	</script>
