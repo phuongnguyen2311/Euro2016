@@ -33,10 +33,12 @@
 			#center {
 			    display: inline-block;
 			    margin:0 auto;
-			    width:20%;
+			    width:24%;
 			    height: 20px;
 			    margin-top: 90px;
 			    font-weight: bold;
+			    text-shadow: 2px 2px #FF0000;
+			    font-size: 24px;
 			}
 
 			#right {
