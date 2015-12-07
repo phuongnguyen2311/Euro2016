@@ -1,0 +1,19 @@
+@media screen and (max-width: 1079px) {
+	body {
+		width: 100%;
+		min-width: 320px;
+		overflow-x: hidden;
+		font-size: 100%
+	}
+	.box {
+		padding: 2%
+	}
+	#container,
+	main{
+		float: none;
+		clear: both;
+		width: 100%;
+		max-width: 970px;
+		margin: 0 auto
+	}
+}
