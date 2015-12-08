@@ -345,15 +345,13 @@
 			    @include('common.errors')		
 	            <form class="form" action="/userdraw" method="POST"  id="userdraw">
 	              {{ csrf_field() }}
-	                <hr><br>
+	                <hr>
 	                <label>Name <span class= "require">(*)</span>: </label>
-	                <br>
 	                <input type="text" id="username" name="name" placeholder="Ex -john123">
 	                <br>
 	                <span class= "errors errors-username"></span>
 	                <br>
 	                <label>Email <span class= "require">(*)</span>: </label>
-	                <br>
 	                <input type="text" id="email" name="email" placeholder="exempale@gmail.com"><br>
 	                <span class= "errors errors-email"></span>
 	                <input type="hidden" id="group_name" name="group_name" value="Group A">
@@ -361,7 +359,6 @@
 	                <div class="social">
 	         	        @include('partials.share-buttons') 	
 	                </div>     
-	                 <br>
 	                <input type="button" id="enter" value="Enter">
 	            </form>
 	        </div>
