@@ -16,7 +16,7 @@
 		<title>UEFA EURO 2016 Final Draw Simulator</title>
 		<style type="text/css" media="screen">
 			#header-layout{
-                 width:80%;
+                 width:100%;
                  margin: auto;
                  text-align:center;
             }
@@ -35,12 +35,13 @@
 			#center {
 			    display: inline-block;
 			    margin:0 auto;
-			    width:24%;
+			    width:40%;
 			    height: 20px;
 			    margin-top: 90px;
 			    font-weight: bold;
 			    text-shadow: 2px 2px #FF0000;
 			    font-size: 24px;
+			    color: white;
 			}
 
 			#right {
@@ -58,7 +59,8 @@
 		       <img src="/img/logo2016.png" width="250px" height="150px" />
 		    </div>
 		    <div id="center">
-		        EURO 2016 Draw Simulator
+		        	<img src="http://www.liveduel.com/euro2016/static/img/line-head.png">
+		        UEFA EURO 2016 FINAL DUEL
 		    </div>
 		    <div id="right">
 		        <img src="/img/logo2016.png" width="250px" height="150px" />
