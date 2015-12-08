@@ -20,6 +20,10 @@ class CreateUserdrawTable extends Migration
             $table->string('club');
             $table->timestamps();
         });
+        Schema::table('user_draws', function($table)
+        {
+            $table->string('group_name', 1000)->change();
+        });
     }
 
     /**

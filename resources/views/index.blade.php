@@ -1350,16 +1350,26 @@
 		}
 		
 		function showPopup(){
-
+            var str = "{" ;
 			$('#groups').find('.groupW').each(function( index ) {
 				  var group_name = $(this).find('h3').text();
-				  var str = "[ " + group_name + ":[";
-				  $(this).find('ul').find('li').each(function( index ) {
-				  	str+= $(this).text() + ",";
+				  str += '"' + group_name + '":[';
+				  $(this).find('ul').find('li').each(function( indexteam ) {
+					  	if(indexteam == 3){
+	                        str+= '"' +$(this).text() + '"';
+					  	}else{
+					  		str+= '"' +$(this).text() + '",';
+					  	}
+				  	
 				  });
-				  str += "]";
-				  console.log(str);
+				  if (index == 5){
+                     str += "]";
+				  }else{
+                     str += "],";
+				  } 
 			});
+			str += "}";
+			$('#group_name').val(str);
 			$("#logindiv").css("visibility", "visible");
 		}
 

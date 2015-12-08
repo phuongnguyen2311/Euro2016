@@ -10,6 +10,8 @@ body {
 	min-width: 1080px;
 	margin: 0;
 	background-color: #fff;
+	background-image: url('../img/bg2.png');
+	background-size: 100%;
 	color: #333;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 14px;
@@ -230,4 +232,7 @@ input {
 }
 .social{
 	margin-left: 107px;
+}
+.nm {
+	color: white;
 }

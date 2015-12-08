@@ -10,6 +10,8 @@
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/common.css">
 		<link rel="stylesheet" href="css/customize.css">
+		<link rel="icon" type="image/png"
+	       href="http://liveduel.com/rugbyworldcup/static/img/favicon.png" />
 		<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<title>UEFA EURO 2016 Final Draw Simulator</title>
 		<style type="text/css" media="screen">
