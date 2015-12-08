@@ -210,7 +210,6 @@ input {
     left: 0px;
     height: 100%;
     width: 100%;
-    display: none;
 }
 #userdraw {
     left: 50%;
@@ -235,4 +234,13 @@ input {
 }
 .nm {
 	color: white;
+}
+.require{
+	color: red;
+}
+.errors{
+	color: red;
+	font-size: 10px;
+	font-style: italic;
+	display: none;
 }

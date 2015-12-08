@@ -346,23 +346,23 @@
 	            <form class="form" action="/userdraw" method="POST"  id="userdraw">
 	              {{ csrf_field() }}
 	                <hr><br>
-	                <label>Name : </label>
+	                <label>Name <span class= "require">(*)</span>: </label>
 	                <br>
-	                <input type="text" id="username" name="name" placeholder="Ex -john123"><br>
+	                <input type="text" id="username" name="name" placeholder="Ex -john123">
 	                <br>
-	                <label>Email : </label>
+	                <span class= "errors errors-username"></span>
+	                <br>
+	                <label>Email <span class= "require">(*)</span>: </label>
 	                <br>
 	                <input type="text" id="email" name="email" placeholder="exempale@gmail.com"><br>
+	                <span class= "errors errors-email"></span>
 	                <input type="hidden" id="group_name" name="group_name" value="Group A">
-	                <input type="hidden" id="club" name="club" value="FRANCE">
 	                <br>
 	                <div class="social">
 	         	        @include('partials.share-buttons') 	
-	                </div>
-	                 
+	                </div>     
 	                 <br>
-	                <input type="button" id="loginbtn" value="Enter">
-	                <br> 
+	                <input type="button" id="enter" value="Enter">
 	            </form>
 	        </div>
 		</main>
@@ -1350,6 +1350,7 @@
 		}
 		
 		function showPopup(){
+			reset();
             var str = "{" ;
 			$('#groups').find('.groupW').each(function( index ) {
 				  var group_name = $(this).find('h3').text();
@@ -1372,9 +1373,42 @@
 			$('#group_name').val(str);
 			$("#logindiv").css("visibility", "visible");
 		}
+		function validate(){
+			var checkValid = true;
+			if($('#username').val() == ""){
+               $('.errors-username').text('Name is required.');
+               $('.errors-username').css("display","block");
+               checkValid = false;
+			}
+			if($('#email').val() == ""){
+               $('.errors-email').text('Email is required.');
+               $('.errors-email').css("display","block");
+               checkValid = false;
 
-		$( "#loginbtn" ).click(function() {
-		   $("#userdraw" ).submit();
+			}
+			return checkValid;
+		}
+		function reset(){
+			var checkValid = true;
+			if($('#username').val() == ""){
+               $('.errors-username').text('');
+               
+			}
+			if($('#email').val() == ""){
+               $('.errors-email').text('');
+			}
+			
+		}
+     
+		$( "#enter" ).click(function() {
+           if(!validate()){
+           	  $("#logindiv").css("display", "block");
+           	  
+            }else{
+            	$("#userdraw" ).submit();
+            }
+           	
+		   
 		});
 	</script>
 @stop
