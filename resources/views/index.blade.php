@@ -340,6 +340,22 @@
 			   </div>
 			   <div style="clear:both;"><a id="drawsave" class="btn btn-lg btn-em"  onclick="showPopup()">Save Prediction</a></div>
 			</div>
+
+            {{-- Descrtiption hint --}}
+			 <div class="hint">
+			     <h2>Draw procedure</h2>
+			     <ul class="dot-square">
+			       <li>There will be four pots:</li>
+			       <li>Pot 1: five teams to include Spain, as the reigning European champions</li>
+			       <li>Pots 2, 3 and 4: six teams</li>
+			       <li>France are not included in the pots as they are automatically assigned position 1 of Group A. </li>
+			     </ul>
+			     <h2>Group Stage</h2>
+			     <ul class="dot-square">
+			       <li>The 24 teams taking part in the final competition will be divided into six groups of four teams.</li>
+			       <li>The six group winners, the six group runners-up and the top four teams of third-placed side qualify directly for the final tournament.</li>
+			     </ul>
+			   </div>
 			<!-- Popup enter name -->
 			<div id="logindiv" >	
 			    @include('common.errors')		

@@ -27,7 +27,7 @@
             }
             #left {
 			    float:left;
-			    width:30%;
+			    width:34%;
 			    height: 20px;
 			    
 			}
@@ -35,7 +35,7 @@
 			#center {
 			    display: inline-block;
 			    margin:0 auto;
-			    width:40%;
+			    width:32%;
 			    height: 20px;
 			    margin-top: 90px;
 			    font-weight: bold;
@@ -46,7 +46,7 @@
 
 			#right {
 			    float:right;
-			    width:30%;
+			    width:34%;
 			    height: 20px;
 			 
 			}
@@ -56,14 +56,14 @@
 	<div class="main">
 	  <div id="header-layout">
 			<div id="left">
-		       <img src="/img/logo2016.png" width="250px" height="150px" />
+		       <img src="/img/euro2016.png" width="250px" height="150px" />
 		    </div>
 		    <div id="center">
-		        	<img src="http://www.liveduel.com/euro2016/static/img/line-head.png">
+		        	{{-- <img src="http://www.liveduel.com/euro2016/static/img/line-head.png"> --}}
 		        UEFA EURO 2016 FINAL DUEL
 		    </div>
 		    <div id="right">
-		        <img src="/img/logo2016.png" width="250px" height="150px" />
+		        <img src="/img/euro2016.png" width="250px" height="150px" />
 		    </div>
 		</div>
         @yield('content')
